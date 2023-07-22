@@ -1,0 +1,70 @@
+{
+    "type": [
+        "null",
+        "object"
+    ],
+    "properties": {
+        "year": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "period": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "periodName": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "latest": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "value": {
+            "type": [
+                "null",
+                "string"
+            ]
+        },
+        "footnotes": {
+            "type": [
+                "null",
+                "array"
+            ],
+            "items": {
+                "type": [
+                    "null",
+                    "object"
+                ],
+                "properties": {
+                    "code": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    },
+                    "text": {
+                        "type": [
+                            "null",
+                            "string"
+                        ]
+                    }
+                }
+            }
+        },
+        "series_id": {
+            "type": [
+                "null",
+                "string"
+            ]
+        }
+    }
+}

@@ -1,0 +1,30 @@
+version: 1
+send_anonymous_usage_stats: true
+project_id: tap-bls
+default_environment: test
+environments:
+- name: test
+plugins:
+  extractors:
+  - name: tap-bls
+    namespace: tap_bls
+    pip_url: -e .
+    capabilities:
+    - state
+    - catalog
+    - discover
+    - about
+    - stream-maps
+    settings:
+    - name: registration_key
+      kind: password
+    - name: start_year
+      kind: integer
+    - name: end_year
+      kind: integer
+    - name: series_ids
+      kind: array
+  loaders:
+  - name: target-jsonl
+    variant: andyh1203
+    pip_url: target-jsonl
