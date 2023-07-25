@@ -31,8 +31,8 @@ class TimeseriesPaginator(BaseAPIPaginator):
         # Split the provided series_ids into sublists each with a maximum of
         # sublist_size entries.
         self.series_ids = [
-            series_ids[i * sublist_size : (i + 1) * sublist_size]
-            for i in range((len(series_ids) + sublist_size - 1) // sublist_size)
+            series_ids[i : i + sublist_size]
+            for i in range(0, len(series_ids), sublist_size)
         ]
 
         try:
@@ -78,8 +78,6 @@ class TimeseriesStream(BLSStream):
         next_page_token: list | None,
     ) -> dict | None:
         """Prepare the data payload for the REST API request.
-
-        By default, no payload will be sent (return None).
 
         Args:
             context: The stream context.

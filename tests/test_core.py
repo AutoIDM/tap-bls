@@ -2,7 +2,7 @@
 
 from singer_sdk.testing import get_tap_test_class
 
-from tap_bls.tap import Tapbls
+from tap_bls.tap import TapBLS
 
 SAMPLE_CONFIG = {
     "series_ids": ["LAUCN040010000000005", "LAUCN040010000000006"],
@@ -12,6 +12,6 @@ SAMPLE_CONFIG = {
 
 # Run standard built-in tap tests from the SDK:
 TestTapbls = get_tap_test_class(
-    tap_class=Tapbls,
+    tap_class=TapBLS,
     config=SAMPLE_CONFIG,
 )

@@ -10,8 +10,8 @@ from singer_sdk import typing as th  # JSON schema typing helpers
 from tap_bls import streams
 
 
-class Tapbls(Tap):
-    """bls tap class."""
+class TapBLS(Tap):
+    """BLS tap class."""
 
     name = "tap-bls"
 
@@ -67,4 +67,4 @@ class Tapbls(Tap):
 
 
 if __name__ == "__main__":
-    Tapbls.cli()
+    TapBLS.cli()
